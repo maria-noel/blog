@@ -1,0 +1,9 @@
+TARGETS = syslog-ng urandom sendsigs hwclock.sh umountnfs.sh networking umountfs umountroot halt reboot
+sendsigs: syslog-ng
+hwclock.sh: syslog-ng
+umountnfs.sh: syslog-ng sendsigs
+networking: syslog-ng umountnfs.sh
+umountfs: urandom networking hwclock.sh syslog-ng umountnfs.sh
+umountroot: umountfs
+halt: umountroot
+reboot: umountroot
