@@ -61,6 +61,9 @@
             .m-b-md {
                 margin-bottom: 30px;
             }
+            small {
+                font-size: 0.8rem;
+            }
         </style>
     </head>
     <body>
