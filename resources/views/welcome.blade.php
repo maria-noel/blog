@@ -82,6 +82,7 @@
             <div class="content">
                 <div class="title m-b-md">
                     Nerd Playground!
+                    <small> Rollback funcionando </small>
                 </div>
 
                 <div class="links">
