@@ -1,0 +1,12 @@
+import random
+from fabric.contrib.files import append, exists
+from fabric.api import cd, run, env, local, task
+
+@task
+env.use_ssh_config = True   # Hacer uso del archivo de configuración SSH
+env.hosts = ['serial-macevedo'] # El nombre que indicamos en nuestro archivo ~/.ssh/config
+
+def deploy():
+	with cd('/var/www/example.com/html'): # La ruta donde tenemos el proyecto
+		run('git pull origin master')
+		run('composer install')
