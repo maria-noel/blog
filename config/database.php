@@ -53,7 +53,7 @@ return [
         ],
         'mysql_tests' => [
             'driver' => 'mysql',
-            'host' => env('DB_HOST', '127.0.0.1'),
+            'host' => env('DB_HOST', 'localhost'),
             'port' => env('DB_PORT', '3306'),
             'database' => env('DB_DATABASE_TESTS', 'blog_tests'),
             'username' => env('MYSQL_USER', env('DB_USERNAME', 'forge')),
